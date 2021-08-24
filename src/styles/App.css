@@ -4,15 +4,40 @@
   font-family: sans-serif;
 }
 
+:root{
+  /*Colores primarios*/
+  --PC-Blue: #f2f2f2;
+  --PC-Purple: #5c2d91;
+
+  /*Colores de acento*/
+  --AC-LightBlue: #50e6ff;
+  --AC-LightPurple: #d59dff;
+  --AC-DarkBlue: #203a61;
+
+  /*Colores neutrales*/
+  --Black: #000;
+  --White: #fff;
+  --E-DarkGray: #2f2f2f;
+  --E-LightGray: #f2f2f2;
+}
+
 .App {
-  background-color: #282c34;
+  background-color: var(--E-LightGray);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  color: var(--Black);
+}
+
+main{
+  flex: 1;
+}
+
+header,
+footer{
+  padding: 2rem;
   text-align: center;
 }
 
