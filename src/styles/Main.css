@@ -44,6 +44,13 @@ section:nth-child(2){
     justify-content: center;
     flex: 1;
     color: var(--E-DarkGray);
+    position: relative;
+}
+
+section div {
+    border: solid 3px; 
+    border-color: #ba0b93; 
+    position: absolute;
 }
 
 img{

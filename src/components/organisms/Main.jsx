@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState} from 'react';
 import axios from "axios";
 import "../../styles/Main.css";
 
@@ -20,8 +20,9 @@ const Main = () => {
             method: 'post',
             url: endpoint,
             params: {
-                detectionModel: 'detection_03',
-                returnFaceId: true
+                detectionModel: 'detection_01',
+                returnFaceId: true,
+                returnFaceAttributes:'age,gender,headPose,smile,facialHair,glasses,emotion,hair,makeup,occlusion,accessories,blur,exposure,noise'
             },
             data: {
                 url: imageUrl
@@ -42,7 +43,7 @@ const Main = () => {
                     type="text"
                     placeholder="Coloca el link de la imagen"
                     onChange={handleOnChange}
-                    value={imageUrl} style={{ width: "450px" }}
+                    value={imageUrl}
                 />
 
                 <button
@@ -58,6 +59,18 @@ const Main = () => {
                     src={imageUrl}
                     alt="Aqui aparecera la imagen"
                 />
+                {
+                    data &&
+                    data.map(r =>(
+                        <div
+                            key={r.faceId}
+                            style={r.faceRectangle}
+                        >
+
+                        </div>
+                        
+                    ))
+                }
             </section>
         </main>
     )
