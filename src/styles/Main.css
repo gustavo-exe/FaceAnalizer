@@ -1,0 +1,51 @@
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width:100%;
+}
+
+section:nth-child(1){
+    
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.contenedor-input{
+    background-color: pink;
+    padding:1rem;
+}
+
+input,button{
+    margin:0;
+    padding:0;
+    border: 0;
+    outline: none;
+    position:relative;
+    padding:1rem;
+}
+
+input{
+    width:50vw;
+}
+
+button{
+    
+    color: var(--White);
+    background-color: var(--AC-DarkBlue)
+}
+
+section:nth-child(2){
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    color: var(--E-DarkGray);
+}
+
+img{
+    width:100%;
+}
