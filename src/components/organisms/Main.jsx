@@ -1,25 +1,35 @@
 import React, { useState } from 'react';
 import axios from "axios";
 import "../../styles/Main.css";
+import Boton from '../atoms/Boton';
+import FormAnalizar from '../molecules/FormAnalizar';
 
 //Key de face api
 let subscriptionKey = process.env.REACT_APP_API_SUBSCRIPTION_KEY;
-let endpoint = process.env.REACT_APP_API_END_POINT + '/face/v1.0/detect';
+let endpoint = process.env.REACT_APP_API_END_POINT + '/face/v1.0/detect'; 
 
 const Main = () => {
 
     const [data, setData] = useState(null);
     const [imageUrl, setImageUrl] = useState('');
-
+    const [displayForm, setDisplayForm] = useState('Flex');
+    const [displayBoton, setDisplayBoton] = useState('none');
     //Cambia el valor del enlace de la imagen cada vez
     //que detecta un cambio
     const handleOnChange = event => {
         setImageUrl(event.target.value)
     }
-
-    //Peticion a la API
+    const handleClickNewAnalysis = () => {
+        setDisplayForm('flex');
+        setDisplayBoton('none');
+        setData(null);
+    }
     const handleClickImage = async event => {
         event.preventDefault();
+        setDisplayForm('none');
+        setDisplayBoton('Flex');
+        
+        //Peticion a la API
         axios({
             method: 'post',
             url: endpoint,
@@ -37,7 +47,7 @@ const Main = () => {
             console.log(response.data)
         }).catch(function (error) {
             console.log(error)
-        })
+        }) 
     }
 
     //Retorna el nombre del campo de la emocion y no el valor
@@ -54,21 +64,22 @@ const Main = () => {
     return (
         <main>
             <section>
-                <input
-                    type="text"
-                    placeholder="Coloca el link de la imagen"
-                    onChange={handleOnChange}
-                    value={imageUrl}
+                <FormAnalizar
+                    OnChange={handleOnChange}
+                    ImageUrl={imageUrl}
+                    OnClick={handleClickImage}
+                    Display={displayForm}
                 />
-                <button
-                    className="buttonFile"
-                    onClick={handleClickImage}
-                >
-                    Analizar
-                </button>
+                
+                <Boton
+                    Display={displayBoton}
+                    OnClick={handleClickNewAnalysis}
+                    Texto={'Nuevo analisis'}
+                />
+                
             </section>
 
-            <section>
+            <section className="imagen-datos" >
                 <div className="imagen-rectangulos" >
                     <img
                         src={imageUrl}
@@ -86,13 +97,13 @@ const Main = () => {
                         ))
                     }
                 </div>
-                <div className="datos-extra"  >
-                <h2>Datos</h2>
+                <div className="datos-extra" style={{display: `${displayBoton}`}} >
+                    <h2>Datos</h2>
                     {
                         data &&
                         data.map(r => (
                             <div className="dato" key={r.faceId} >
-                                
+
                                 <span>
                                     {
                                         r.faceAttributes.gender === "male" ? "🧑" : "👧"
