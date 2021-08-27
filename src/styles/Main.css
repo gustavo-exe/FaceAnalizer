@@ -4,6 +4,7 @@ main{
     align-items: center;
     justify-content: space-between;
     width:100%;
+    font-size: 1.5rem;
 }
 
 section:nth-child(1){
@@ -34,25 +35,53 @@ input{
 button{
     
     color: var(--White);
-    background-color: var(--AC-DarkBlue)
+    background-color: var(--PC-Blue)
 }
 
 section:nth-child(2){
+    flex: 1;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
-    flex: 1;
-    color: var(--E-DarkGray);
+    flex-wrap: wrap;
+    padding: 2rem;
+    gap: 2rem;
+}
+
+img{
+    width:100%;
+}
+
+.imagen-rectangulos{
+    display: flex;
     position: relative;
 }
 
-section div {
+.rectangulo {
     border: solid 3px; 
     border-color: #ba0b93; 
     position: absolute;
 }
 
-img{
-    width:100%;
+.datos-extra{
+    height:30rem;
+    width:20rem;
+    padding: 1rem;
+    padding-top: 0rem;
+    overflow-y: auto;
+    scrollbar-color: transparent transparent;
+    scrollbar-width: 0rem;
+}
+
+.dato{
+    width: 100%;
+    margin-top: 1rem;
+    background: var(--White);
+    box-shadow: 2px 4px 18px rgba(32, 58, 97, 0.17);
+    
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between
+    
 }
