@@ -19,6 +19,11 @@ const Main = () => {
     const handleOnChange = event => {
         setImageUrl(event.target.value)
     }
+
+    const handleOnClickLimpiarInput = () => {
+        setImageUrl('');
+    }
+
     const handleClickNewAnalysis = () => {
         setDisplayForm('flex');
         setDisplayBoton('none');
@@ -69,12 +74,13 @@ const Main = () => {
                     ImageUrl={imageUrl}
                     OnClick={handleClickImage}
                     Display={displayForm}
+                    OnClickLimpiarInput={handleOnClickLimpiarInput}
                 />
                 
                 <Boton
                     Display={displayBoton}
                     OnClick={handleClickNewAnalysis}
-                    Texto={'Nuevo analisis'}
+                    Texto={'Nuevo análisis'}
                 />
                 
             </section>

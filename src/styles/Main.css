@@ -8,34 +8,43 @@ main{
 }
 
 section:nth-child(1){
-    
     display: flex;
     flex-direction: row;
-    
+    align-content: center;    
 }
 
-.contenedor-input{
-    background-color: pink;
-    padding:1rem;
-}
 
 input,button{
     margin:0;
     padding:0;
-    border: 0;
+    border:0;
     outline: none;
     position:relative;
-    padding:1rem;
+    padding:.5rem;
 }
 
 input{
     width:50vw;
+    height:100%;
+    font-size: 1rem;
+}
+.input-button{
+    align-self: center;
+    justify-content: center;
 }
 
 button{
-    
     color: var(--White);
-    background-color: var(--PC-Blue)
+    background-color: var(--PC-Blue);
+    cursor: pointer;
+}
+.button-flotante{
+    color: var(--PC-Blue);
+    background-color: transparent;
+    position: absolute;
+    z-index: 10;
+    float: right;
+    transform:translate(-85%,-5%);
 }
 
 .imagen-datos{
