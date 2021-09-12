@@ -9,15 +9,9 @@
   --PC-Blue: #0078d4;
   --PC-Purple: #5c2d91;
 
-  /*Colores de acento*/
-  --AC-LightBlue: #50e6ff;
-  --AC-LightPurple: #d59dff;
-  --AC-DarkBlue: #203a61;
-
   /*Colores neutrales*/
   --Black: #000;
   --White: #fff;
-  --E-DarkGray: #2f2f2f;
   --E-LightGray: #f2f2f2;
 }
 
@@ -39,8 +33,4 @@ header,
 footer{
   padding: 2rem;
   text-align: center;
-}
-
-.App-link {
-  color: #61dafb;
 }

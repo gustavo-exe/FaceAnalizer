@@ -14,6 +14,7 @@ const Main = () => {
     const [imageUrl, setImageUrl] = useState('');
     const [displayForm, setDisplayForm] = useState('Flex');
     const [displayBoton, setDisplayBoton] = useState('none');
+    
     //Cambia el valor del enlace de la imagen cada vez
     //que detecta un cambio
     const handleOnChange = event => {
@@ -29,7 +30,19 @@ const Main = () => {
         setDisplayBoton('none');
         setData(null);
     }
-    const handleClickImage = async event => {
+
+    //Retorna el nombre del campo de la emocion y no el valor
+    const RetornandoEmocion = (emocion) => {
+        for (let key in emocion) {
+            if (emocion[key] > 0) {
+                //Coloca la primera letra en mayuscula y se concatena
+                //el resto de letras
+                return key.charAt(0).toUpperCase() + key.slice(1);
+            }
+        }
+    }
+
+    const handleClickAnalizarImagen = async event => {
         event.preventDefault();
         setDisplayForm('none');
         setDisplayBoton('Flex');
@@ -55,24 +68,13 @@ const Main = () => {
         }) 
     }
 
-    //Retorna el nombre del campo de la emocion y no el valor
-    const RetornandoEmocion = (emocion) => {
-        for (let key in emocion) {
-            if (emocion[key] > 0) {
-                //Coloca la primera letra en mayuscula y se concatena
-                //el resto de letras
-                return key.charAt(0).toUpperCase() + key.slice(1);
-            }
-        }
-    }
-
     return (
         <main>
             <section>
                 <FormAnalizar
                     OnChange={handleOnChange}
                     ImageUrl={imageUrl}
-                    OnClick={handleClickImage}
+                    OnClick={handleClickAnalizarImagen}
                     Display={displayForm}
                     OnClickLimpiarInput={handleOnClickLimpiarInput}
                 />
