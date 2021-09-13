@@ -18,8 +18,7 @@ Fue contruida de demo para mi primer evento como Microsoft Learn Student Ambassa
 ```
 npm install 
 ```
-2. Crear archivo de variables de anviente, en el repositorio se encuentra un archivo llamado: .env.example
-que muetra como deberian ser colocadas
+2. Crear archivo de variables de ambiente como se muetra en el siguiente ejemplo o en el repositorio se encuentra un archivo llamado: .env.example que muestra como deberian ser colocadas.
 ```
 REACT_APP_API_END_POINT=TU-ENDPOINT
 REACT_APP_API_SUBSCRIPTION_KEY=TU-KEY
