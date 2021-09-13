@@ -8,7 +8,8 @@ import "../../styles/Main.css";
 /*Componentes*/
 import Boton from '../atoms/Boton';
 import FormAnalizar from '../molecules/FormAnalizar';
-
+import ImagenRectangulos from "../molecules/ImagenRectangulos";
+import DatosExtra from '../molecules/DatosExtra';
 //Key de face api
 let subscriptionKey = process.env.REACT_APP_API_SUBSCRIPTION_KEY;
 let endpoint = process.env.REACT_APP_API_END_POINT + '/face/v1.0/detect'; 
@@ -34,17 +35,6 @@ const Main = () => {
         setDisplayForm('flex');
         setDisplayBoton('none');
         setData(null);
-    }
-
-    //Retorna el nombre del campo de la emocion y no el valor
-    const RetornandoEmocion = (emocion) => {
-        for (let key in emocion) {
-            if (emocion[key] > 0) {
-                //Coloca la primera letra en mayuscula y se concatena
-                //el resto de letras
-                return key.charAt(0).toUpperCase() + key.slice(1);
-            }
-        }
     }
 
     const handleClickAnalizarImagen = async event => {
@@ -93,47 +83,14 @@ const Main = () => {
             </section>
 
             <section className="imagen-datos" >
-                <div className="imagen-rectangulos" >
-                    <img
-                        src={imageUrl}
-                        alt="Aqui aparecera la imagen"
-                    />
-                    {
-                        data &&
-                        data.map(r => (
-                            <div
-                                key={r.faceId}
-                                style={r.faceRectangle}
-                                className="rectangulo"
-                            >
-                            </div>
-                        ))
-                    }
-                </div>
-                <div className="datos-extra" style={{display: `${displayBoton}`}} >
-                    <h2>Datos</h2>
-                    {
-                        data &&
-                        data.map(r => (
-                            <div className="dato" key={r.faceId} >
-
-                                <span>
-                                    {
-                                        r.faceAttributes.gender === "male" ? "🧑" : "👧"
-                                    }
-                                    {
-                                        r.faceAttributes.age
-                                    }
-                                </span>
-                                <span>
-                                    {
-                                        RetornandoEmocion(r.faceAttributes.emotion)
-                                    }
-                                </span>
-                            </div>
-                        ))
-                    }
-                </div>
+                <ImagenRectangulos
+                    ImageUrl ={imageUrl}
+                    Data={data}
+                />
+                <DatosExtra
+                    Data={data}
+                    DisplayBoton={displayBoton}
+                />
             </section>
         </main>
     )

@@ -1,0 +1,14 @@
+.imagen-rectangulos{
+    display: flex;
+    position: relative;
+}
+
+img{    
+    width: 100%;
+}
+
+.rectangulo {
+    border: solid 3px; 
+    border-color: #ba0b93; 
+    position: absolute;
+}
