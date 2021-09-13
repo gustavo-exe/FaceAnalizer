@@ -2,16 +2,8 @@
   <h3 align="center">Face Analizer</h3>
 </p>
 
-Es una sinple page aplication que permite acceder Cognitive Service API Face de Azure.
+Es una single page application que permite acceder Cognitive Service API Face de Azure.
 Fue contruida de demo para mi primer evento como Microsoft Learn Student Ambassador.
-
-## Objetivos
-### Objetivos General
- * Obtener información desde una API y transformar su datos.
- 
-### Objetivos Específicos 
- * Reforzar los conocimientos aprendidos en la clase Programación Movil I sobre el lenguaje de programación JavaScript y el framework react.<br>
- * Comprender el funcionamiento de la Spoify API y la composición de un token.
 
 ## Previsualización
 <p align="center"><img src="https://user-images.githubusercontent.com/61214852/133018708-39d2fbca-7934-4c21-af36-7f802ca4bb4c.png" height=500></p><br>
