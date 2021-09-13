@@ -14,7 +14,7 @@ Fue contruida de demo para mi primer evento como Microsoft Learn Student Ambassa
  * Comprender el funcionamiento de la Spoify API y la composición de un token.
 
 ## Previsualización
-<p align="center"><img src="" height=500></p><br>
+<p align="center"><img src="https://user-images.githubusercontent.com/61214852/133018708-39d2fbca-7934-4c21-af36-7f802ca4bb4c.png" height=500></p><br>
 
 ## Construido con
 * React
