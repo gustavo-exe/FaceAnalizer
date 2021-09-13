@@ -1,3 +1,5 @@
+
+import "../../styles/FormAnalizer.css"
 import React from "react";
 
 const FormAnalizar = ({ OnChange, ImageUrl, OnClick, Display, OnClickLimpiarInput }) => (

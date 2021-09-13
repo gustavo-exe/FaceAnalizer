@@ -1,6 +1,11 @@
 import React, { useState } from 'react';
 import axios from "axios";
+/*Estilos */
+import "../../styles/Normalize.css";
+import "../../styles/Variables.css"
 import "../../styles/Main.css";
+
+/*Componentes*/
 import Boton from '../atoms/Boton';
 import FormAnalizar from '../molecules/FormAnalizar';
 

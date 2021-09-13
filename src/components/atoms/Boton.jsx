@@ -1,5 +1,4 @@
-import React from "react";
-
+import "../../styles/Boton.css"
 const Boton = ({OnClick, Display, Texto}) => (
     <section  style={{display:`${Display}`}}>
         <button

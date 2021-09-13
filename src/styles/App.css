@@ -1,20 +1,3 @@
-*{
-  box-sizing: border-box;
-  margin: 0;
-  font-family: sans-serif;
-}
-
-:root{
-  /*Colores primarios*/
-  --PC-Blue: #0078d4;
-  --PC-Purple: #5c2d91;
-
-  /*Colores neutrales*/
-  --Black: #000;
-  --White: #fff;
-  --E-LightGray: #f2f2f2;
-}
-
 .App {
   background-color: var(--E-LightGray);
   min-height: 100vh;
@@ -23,10 +6,6 @@
   align-items: center;
   justify-content: center;
   color: var(--Black);
-}
-
-main{
-  flex: 1;
 }
 
 header,
