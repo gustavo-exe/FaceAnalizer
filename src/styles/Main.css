@@ -30,10 +30,8 @@ section:nth-child(1){
 .imagen-datos{
     flex: 1;
     display: flex;
-    flex-direction: row;
     align-items: center;
     justify-content: center;
-    flex-wrap: wrap;
     padding: 2rem;
     gap: 2rem;
 }

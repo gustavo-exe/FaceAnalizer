@@ -9,6 +9,6 @@ img{
 
 .rectangulo {
     border: solid 3px; 
-    border-color: #ba0b93; 
+    border-color: var(--AC-Light-Purple); 
     position: absolute;
 }

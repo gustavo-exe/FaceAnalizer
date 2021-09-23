@@ -9,7 +9,6 @@ import "../../styles/Main.css";
 import Boton from '../atoms/Boton';
 import FormAnalizar from '../molecules/FormAnalizar';
 import ImagenRectangulos from "../molecules/ImagenRectangulos";
-import DatosExtra from '../molecules/DatosExtra';
 //Key de face api
 let subscriptionKey = process.env.REACT_APP_API_SUBSCRIPTION_KEY;
 let endpoint = process.env.REACT_APP_API_END_POINT + '/face/v1.0/detect'; 
@@ -86,10 +85,6 @@ const Main = () => {
                 <ImagenRectangulos
                     ImageUrl ={imageUrl}
                     Data={data}
-                />
-                <DatosExtra
-                    Data={data}
-                    DisplayBoton={displayBoton}
                 />
             </section>
         </main>
