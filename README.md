@@ -6,7 +6,7 @@ Es una single page application que permite acceder Cognitive Service API Face de
 Fue contruida de demo para mi primer evento como Microsoft Learn Student Ambassador.
 
 ## Previsualización
-<p align="center"><img src="https://user-images.githubusercontent.com/61214852/133018708-39d2fbca-7934-4c21-af36-7f802ca4bb4c.png" height=500></p><br>
+<p align="center"><img src="https://user-images.githubusercontent.com/61214852/144940232-e8189ec0-de2e-4afb-8236-12bdd625e672.png" height=500></p><br>
 
 ## Construido con
 * React
